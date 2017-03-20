@@ -31,7 +31,22 @@
       <article class="tile" ng-repeat="film in dataList | filter: {recently: true}">
         <img class="tile__img" src="{{film.poster}}" alt=""  />
         <div class="tile__details">
-          <span class="tile__title">{{film.title}}</span>
+          <div class="tile__player"></div>
+          <div class="tile__description">
+            <span class="tile__title">{{film.title}}</span>
+            <div class="star-{{film.rating}} tile__rating">
+              <i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <span class="tile__info">{{film.year}}</span>
+            <span class="tile__info tile__rated">{{film.rated}}</span>
+            <span class="tile__info" ng-if="film.type === 'movie'">{{film.duration}}</span>
+            <span class="tile__info" ng-if="film.type === 'series'">{{film.seasons}} seasons</span>
+            <p class="title__plot">{{film.description}}</p>
+          </div>
         </div>
       </article>
     </div>
@@ -44,7 +59,22 @@
       <article class="tile" ng-repeat="film in dataList | filter: {genre: 'Comedy'}">
         <img class="tile__img" src="{{film.poster}}" alt=""  />
         <div class="tile__details">
-          <span class="tile__title">{{film.title}}</span>
+          <div class="tile__player"></div>
+          <div class="tile__description">
+            <span class="tile__title">{{film.title}}</span>
+            <div class="star-{{film.rating}} tile__rating">
+              <i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <span class="tile__info">{{film.year}}</span>
+            <span class="tile__info tile__rated">{{film.rated}}</span>
+            <span class="tile__info" ng-if="film.type === 'movie'">{{film.duration}}</span>
+            <span class="tile__info" ng-if="film.type === 'series'">{{film.seasons}} seasons</span>
+            <p class="title__plot">{{film.description}}</p>
+          </div>
         </div>
       </article>
     </div>
@@ -57,7 +87,22 @@
       <article class="tile" ng-repeat="film in dataList | filter: {genre: 'Drama'}">
         <img class="tile__img" src="{{film.poster}}" alt=""  />
         <div class="tile__details">
-          <span class="tile__title">{{film.title}}</span>
+          <div class="tile__player"></div>
+          <div class="tile__description">
+            <span class="tile__title">{{film.title}}</span>
+            <div class="star-{{film.rating}} tile__rating">
+              <i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i><!--
+              --><i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <span class="tile__info">{{film.year}}</span>
+            <span class="tile__info tile__rated">{{film.rated}}</span>
+            <span class="tile__info" ng-if="film.type === 'movie'">{{film.duration}}</span>
+            <span class="tile__info" ng-if="film.type === 'series'">{{film.seasons}} seasons</span>
+            <p class="title__plot">{{film.description}}</p>
+          </div>
         </div>
       </article>
     </div>
